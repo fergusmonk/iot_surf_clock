@@ -1,0 +1,5 @@
+httpx
+Pillow
+# Waveshare e-ink driver — install from their GitHub on the Pi:
+# git clone https://github.com/waveshare/e-Paper
+# pip install ./e-Paper/RaspberryPi_JetsonNano/python/

@@ -1,0 +1,19 @@
+[Unit]
+Description=IoT Surf Clock — e-ink display client
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/iot_surf_clock
+Environment=SERVER_URL=http://192.168.1.50:8000
+Environment=REFRESH_SEC=300
+# Uncomment to set a permanent alarm time:
+# Environment=NEXT_ALARM=07:00
+ExecStart=/usr/bin/python3 -m pi.client
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
